@@ -12,6 +12,9 @@ def calculate(a, op, b):
             raise Exception('division by 0')
     return None
 
+def calculate_list(term):
+    pass
+
 def main():
     assert calculate(3, '+', 2) == 5
     assert calculate(4, '-', 2) == 2
@@ -22,6 +25,11 @@ def main():
         pass
     assert calculate(10, '*', 5) == 50
     assert calculate(10, '/', 5) == 2
+
+    term = input('>')
+    term = filter(lambda c: not c.isspace(), term)
+    result = calculate_list(term)
+    print(result)
 
 if __name__ == '__main__':
     main()
