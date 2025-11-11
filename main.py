@@ -1,6 +1,8 @@
 def calculate(a, op, b):
     if op == '+':
         return a + b
+    elif op == '-':
+        return a - b
     elif op == '*':
         return a * b
     elif op == '/':
@@ -12,6 +14,7 @@ def calculate(a, op, b):
 
 def main():
     assert calculate(3, '+', 2) == 5
+    assert calculate(4, '-', 2) == 2
     try:
         calculate(10,'/', 0)
         assert False
